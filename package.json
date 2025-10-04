@@ -1,0 +1,20 @@
+{
+  "name": "ganga-water-quality",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Ganga River Water Quality Monitoring & Forecasting (MERN)",
+  "scripts": {
+    "install:server": "npm install --prefix server",
+    "install:client": "npm install --prefix client",
+    "install:all": "npm run install:server && npm run install:client",
+    "dev": "concurrently -n SERVER,CLIENT -c green,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "server": "npm start --prefix server",
+    "client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "forecast": "npm run forecast --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
+
